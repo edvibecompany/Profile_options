@@ -1,9 +1,7 @@
-from selene import browser, have, be
+from selene import browser, have
 
 
 def test_sections_check(login):
-    browser.wait_until(browser.element('.edvibe3-shedule').should(be.visible))
-
     # Переход во вкладку Обучение
     browser.element('.sidebar_section_list .iconedv-School').click()
     browser.element('.content_layout-content-title').should(have.exact_text('Обучение'))

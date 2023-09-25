@@ -1,9 +1,7 @@
-from selene import browser, have, be
+from selene import browser, have
 
 
 def test_change_account_theme(login):
-    browser.wait_until(browser.element('.edvibe3-shedule').should(be.visible))
-
     # Смена темы на темную
     browser.element('.user-popover .iconedv-Arrow-More-Down').click()
     browser.element('.theme-block_button:nth-child(3)').click()

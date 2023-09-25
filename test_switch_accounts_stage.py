@@ -1,9 +1,6 @@
-from selene import browser, have, be
-
+from selene import browser, have
 
 def test_switch_account(login):
-    browser.wait_until(browser.element('.edvibe3-shedule').should(be.visible))
-
     # Переход в марафоны
     browser.element('.menu-toggle').click()
     browser.element('.sections_menu-items .section_card:nth-child(2)').click()

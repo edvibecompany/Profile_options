@@ -2,8 +2,6 @@ from selene import browser, have, be
 
 
 def test_check_account_options(login):
-    browser.wait_until(browser.element('.edvibe3-shedule').should(be.visible))
-
     # Переход в настройки через меню аккаунта
     browser.element('.user-popover .iconedv-Arrow-More-Down').click()
     browser.element('.tir-option:nth-child(1)').click()
